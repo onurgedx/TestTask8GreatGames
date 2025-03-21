@@ -9,38 +9,41 @@ using UnityEngine;
 namespace PassengerPickup.Gameplay.SceneEntry
 {
 
-public class PassangerPickUpSceneEntry : MonoBehaviour
-{
-    public CellSystem CellSystem { get; private set; }
-    public IPathFinder PathFinder;
-
-
-    private PassageSystem _passageSystem;
-
-
-    [SerializeField]
-    private PassageDataScriptable _passageDatas;
-
-
-    [SerializeField]
-    private CellPool _cellPool;
-
-    [SerializeField]
-    private PassagePool _passagePool;
-
-    [SerializeField] private MovementSystem _movementSystem;
-
-    void Start()
+    /// <summary>
+    /// SceneEntry for PassangerPickUp Scene
+    /// </summary>
+    public class PassangerPickUpSceneEntry : MonoBehaviour
     {
-        CellSystem = new CellSystem(_cellPool, 4, 4);
-        PathFinder = new AStarPathFinder(CellSystem);
-        _passageSystem = new PassageSystem(_passagePool, _passageDatas.PassagerRawDatas);
-    }
+        public CellSystem CellSystem { get; private set; }
+        public IPathFinder PathFinder;
 
-    void Update()
-    {
 
+        private PassageSystem _passageSystem;
+
+
+        [SerializeField]
+        private PassageDataScriptable _passageDatas;
+
+
+        [SerializeField]
+        private CellPool _cellPool;
+
+        [SerializeField]
+        private PassagePool _passagePool;
+
+        [SerializeField] private MovementSystem _movementSystem;
+
+        void Start()
+        {
+            CellSystem = new CellSystem(_cellPool, 4, 4);
+            PathFinder = new AStarPathFinder(CellSystem);
+            _passageSystem = new PassageSystem(_passagePool, _passageDatas.PassagerRawDatas);
+        }
+
+        void Update()
+        {
+
+        }
     }
-}
 
 }

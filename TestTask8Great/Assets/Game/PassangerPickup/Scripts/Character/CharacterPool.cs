@@ -1,6 +1,9 @@
 using Common.PoolSys; 
 using UnityEngine;
 
+/// <summary>
+///  Character Pools
+/// </summary>
 public class CharacterPool : MonoBehaviour
 {
     public Pool<Transform> BluePool => _chaBluePool;

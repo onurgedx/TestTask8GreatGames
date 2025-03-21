@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: PassageData
   m_EditorClassIdentifier: 
   _passageRawDatas:
-  - _side: 0
+  - _side: 1
     _cellPosition: {x: 0, y: 0}
+    _characterColorOrder: 01000000010000000100000000000000000000000200000002000000
+  - _side: 2
+    _cellPosition: {x: 0, y: 2}
     _characterColorOrder: 01000000010000000100000000000000000000000200000002000000
