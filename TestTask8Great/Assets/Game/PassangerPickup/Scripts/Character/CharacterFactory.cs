@@ -23,19 +23,21 @@ namespace PassengerPickup.Gameplay.Cha
         public Character Create(ColorEnumeration a_chaColor)
         {
             Character cha = new Character();
+            CharacterBehavior characterBehavior=null;
             switch (a_chaColor)
             {
                 case ColorEnumeration.Red:
-                    _chaPool.RedPool.GetPoolMember().GetComponent<CharacterBehavior>();
+                    characterBehavior =_chaPool.RedPool.GetPoolMember().GetComponent<CharacterBehavior>();
                     break;
                 case ColorEnumeration.Orange:
-                    _chaPool.OrangePool.GetPoolMember().GetComponent<CharacterBehavior>();
+                    characterBehavior = _chaPool.OrangePool.GetPoolMember().GetComponent<CharacterBehavior>();
                     break;
                 case ColorEnumeration.Blue:
-                    _chaPool.BluePool.GetPoolMember().GetComponent<CharacterBehavior>();
+                    characterBehavior = _chaPool.BluePool.GetPoolMember().GetComponent<CharacterBehavior>();
                     break;
             }
-
+            cha.OnRun += characterBehavior.Run;
+            cha.OnJumpAndSit += characterBehavior.JumpAndSit;
             return cha;
 
         }

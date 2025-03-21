@@ -370,6 +370,7 @@ MonoBehaviour:
   _passageDatas: {fileID: 11400000, guid: 9b97df0d6bf04c540896f2d8f11fbfeb, type: 2}
   _cellPool: {fileID: 1926980955}
   _passagePool: {fileID: 1936048598}
+  _chaPool: {fileID: 0}
   _movementSystem: {fileID: 765518900}
 --- !u!1 &765518898
 GameObject:
