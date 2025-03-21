@@ -1,18 +1,23 @@
-using Common.PoolSys; 
+using Common.PoolSys;
 using UnityEngine;
 
-/// <summary>
-///  Character Pools
-/// </summary>
-public class CharacterPool : MonoBehaviour
+namespace PassengerPickup.Gameplay.Cha
 {
-    public Pool<Transform> BluePool => _chaBluePool;
-    [SerializeField] private Pool<Transform> _chaBluePool;
 
-    public Pool<Transform> RedPool => _chaRedPool;
-    [SerializeField] private Pool<Transform> _chaRedPool;
+    /// <summary>
+    ///  Character Pools
+    /// </summary>
+    public class CharacterPool : MonoBehaviour
+    {
+        public Pool<Transform> BluePool => _chaBluePool;
+        [SerializeField] private Pool<Transform> _chaBluePool;
 
-    public Pool<Transform> OrangePool => _chaOrangePool;
-    [SerializeField] private Pool<Transform> _chaOrangePool;
+        public Pool<Transform> RedPool => _chaRedPool;
+        [SerializeField] private Pool<Transform> _chaRedPool;
+
+        public Pool<Transform> OrangePool => _chaOrangePool;
+        [SerializeField] private Pool<Transform> _chaOrangePool;
+
+    }
 
 }

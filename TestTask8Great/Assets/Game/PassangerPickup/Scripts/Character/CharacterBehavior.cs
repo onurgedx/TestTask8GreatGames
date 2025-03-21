@@ -1,7 +1,12 @@
 using UnityEngine;
-
-public class CharacterBehavior : MonoBehaviour
+namespace PassengerPickup.Gameplay.Cha
 {
-     
-     
+    /// <summary>
+    /// Character View
+    /// </summary>
+    public class CharacterBehavior : MonoBehaviour
+    {
+
+
+    }
 }

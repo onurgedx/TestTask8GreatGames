@@ -1,6 +1,7 @@
 using Common.CellSys;
 using PassengerPickup.Algorithms.PathFinder;
 using PassengerPickup.Data;
+using PassengerPickup.Gameplay.Cha;
 using PassengerPickup.Gameplay.MovementSys;
 using PassengerPickup.Gameplay.PassageSys;
 using PassengerPickup.Pool;
@@ -17,6 +18,8 @@ namespace PassengerPickup.Gameplay.SceneEntry
         public CellSystem CellSystem { get; private set; }
         public IPathFinder PathFinder;
 
+        [SerializeField]
+        private CharacterManager _chaManager;
 
         private PassageSystem _passageSystem;
 
@@ -31,13 +34,23 @@ namespace PassengerPickup.Gameplay.SceneEntry
         [SerializeField]
         private PassagePool _passagePool;
 
+        [SerializeField]
+        private CharacterPool _chaPool;
+
         [SerializeField] private MovementSystem _movementSystem;
 
         void Start()
         {
             CellSystem = new CellSystem(_cellPool, 4, 4);
             PathFinder = new AStarPathFinder(CellSystem);
-            _passageSystem = new PassageSystem(_passagePool, _passageDatas.PassagerRawDatas);
+            
+
+            CharacterFactory chaFactory = new CharacterFactory(_chaPool);
+            _chaManager = new CharacterManager(chaFactory);
+
+            _passageSystem = new PassageSystem(_passagePool, _passageDatas.PassagerRawDatas, _chaManager);
+            
+
         }
 
         void Update()

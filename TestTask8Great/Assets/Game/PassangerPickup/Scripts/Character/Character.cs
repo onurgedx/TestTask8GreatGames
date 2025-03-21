@@ -1,10 +1,15 @@
 
 using System;
-public class Character  
+namespace PassengerPickup.Gameplay.Cha
 {
-    
-    public Character()
+    /// <summary>
+    /// Character Logic
+    /// </summary>
+    public class Character
     {
+        public Character()
+        {
 
-    }   
+        }
+    }
 }
