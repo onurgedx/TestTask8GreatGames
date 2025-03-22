@@ -1,6 +1,7 @@
+
 namespace PassengerPickup.Gameplay.RollerCoast
 {
-    public interface IWegan
+    public class WeganMid : Wegan
     {
 
     }

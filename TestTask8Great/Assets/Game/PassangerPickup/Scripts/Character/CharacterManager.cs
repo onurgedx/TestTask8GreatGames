@@ -10,8 +10,7 @@ namespace PassengerPickup.Gameplay.Cha
     public class CharacterManager : IPassageCharacterCreator
     {
 
-        private CharacterFactory _characterFactory  ;
-
+        private CharacterFactory _characterFactory;
         private Dictionary<IPassage, List<Character>> _characters = new();
 
         public CharacterManager(CharacterFactory a_characterFactory)
@@ -33,10 +32,7 @@ namespace PassengerPickup.Gameplay.Cha
                 chaList.Add(_characterFactory.Create(color));
             } 
             _characters.Add(a_passage, chaList);
-        }
-        
-
-
+        } 
 
     }
 }

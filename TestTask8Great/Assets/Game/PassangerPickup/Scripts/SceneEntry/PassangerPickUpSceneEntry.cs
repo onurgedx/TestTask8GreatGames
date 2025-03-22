@@ -4,6 +4,7 @@ using PassengerPickup.Data;
 using PassengerPickup.Gameplay.Cha;
 using PassengerPickup.Gameplay.MovementSys;
 using PassengerPickup.Gameplay.PassageSys;
+using PassengerPickup.Gameplay.RollerCoast;
 using PassengerPickup.Pool;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ namespace PassengerPickup.Gameplay.SceneEntry
         public CellSystem CellSystem { get; private set; }
         public IPathFinder PathFinder;
 
-        [SerializeField]
+        private RollerCoasterManager _rollerCoasterManager;
         private CharacterManager _chaManager;
 
         private PassageSystem _passageSystem;
@@ -49,7 +50,7 @@ namespace PassengerPickup.Gameplay.SceneEntry
             _chaManager = new CharacterManager(chaFactory);
 
             _passageSystem = new PassageSystem(_passagePool, _passageDatas.PassagerRawDatas, _chaManager);
-            
+            _rollerCoasterManager = new RollerCoasterManager(_movementSystem);
 
         }
 

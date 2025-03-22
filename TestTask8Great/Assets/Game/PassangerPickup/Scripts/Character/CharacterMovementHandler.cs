@@ -39,7 +39,7 @@ namespace PassengerPickup.Gameplay.Cha
                 float counter = 0;
                 while(true)
                 {
-                    counter =Mathf.Clamp( counter+ Time.deltaTime * 10 , 0, 1.1f);
+                    counter =Mathf.Clamp( counter+ Time.deltaTime * k_speed, 0, 1.1f);
                    _monoBehavior.transform.position = Vector3.Lerp(startPos, a_destinationPosition, counter);
                     if(counter>=1){ break; }
                     yield return null;

@@ -16,7 +16,6 @@ namespace PassengerPickup.Gameplay.PassageSys
         private List<Passage> _passageList = new List<Passage>();
 
         private PassageRawData[] _passageRawDatas;
-
         
 
         public PassageSystem(PassagePool a_passagePool, PassageRawData[] a_passageRawDatas,IPassageCharacterCreator a_passagerCharacterCreator)

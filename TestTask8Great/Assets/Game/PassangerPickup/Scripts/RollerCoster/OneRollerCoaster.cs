@@ -1,7 +1,7 @@
 
 namespace PassengerPickup.Gameplay.RollerCoast
 {
-    public abstract class Wegan
+    public class OneRollerCoaster
     {
 
     }

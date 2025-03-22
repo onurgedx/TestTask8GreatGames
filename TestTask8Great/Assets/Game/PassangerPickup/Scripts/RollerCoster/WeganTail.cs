@@ -1,6 +1,8 @@
+
 namespace PassengerPickup.Gameplay.RollerCoast
 {
-    public interface IRollerCaoster
+    public class WeganTail : Wegan
     {
+
     }
 }
